@@ -10,7 +10,7 @@ export const vigenere = (plainText, key, isRepeatKey) => {
     for (let i = 0; i < plainText.length; i++) {
         plainTextIndex = alphabet.indexOf(plainText[i].toLowerCase())
         keyIndex = alphabet.indexOf(finalKey[i].toLowerCase())
-        cipherIndex = (plainTextIndex + keyIndex) % alphabet.length
+        cipherIndex = (plainTextIndex + keyIndex) % 26
         cipherText += alphabet[cipherIndex].toUpperCase()
     }
 

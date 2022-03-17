@@ -1,18 +1,16 @@
-export const ceasair = (plainText, key) => {
-    const upperCasePlainText = plainText.toUpperCase().trim()
-    const cipherText = []
+const alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
-    for (const i in upperCasePlainText) {
-        if (upperCasePlainText[i] == ' ') {
-            cipherText.push(' ')
-        }
+export const ceasair = (plainText, key) => {
+    let cipherText = ''
+
+    for (const i in plainText) {
+        if (plainText[i] == ' ') cipherText += ' '
         else {
-            const pos = String.fromCharCode((upperCasePlainText.charCodeAt(i) - 65 + key) % 26 + 65)
-            cipherText.push(pos)
-        }      
+            const plainTextIndex = alphabet.indexOf(plainText[i].toLowerCase())
+            const cipherIndex = (plainTextIndex + key) % 26
+            cipherText += alphabet[cipherIndex].toUpperCase()
+        }
     }
     
-    return cipherText.join('')
+    return cipherText
 }
-
-console.log(ceasair('XIN CHAO    AE   ', 7))

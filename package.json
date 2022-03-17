@@ -2,11 +2,11 @@
   "name": "cipher-api",
   "version": "1.0.0",
   "description": "School Project",
-  "main": "playfair.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon vigenere.js"
+    "start": "nodemon ceasiar.js"
   },
   "author": "",
   "license": "ISC",
