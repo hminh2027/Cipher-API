@@ -1,8 +1,9 @@
 {
-  "name": "encryption-api",
+  "name": "cipher-api",
   "version": "1.0.0",
   "description": "School Project",
   "main": "playfair.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon vigenere.js"
